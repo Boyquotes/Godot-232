@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Label.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 136.0
+margin_bottom = 86.0
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 44.0
+margin_top = 57.0
+margin_right = 91.0
+margin_bottom = 77.0
+text = "Press"
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 23.0
+margin_top = 15.0
+margin_right = 99.0
+margin_bottom = 41.0
+text = "Welcome!"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Label" method="_on_Button_pressed"]
